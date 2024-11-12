@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Existing Planets</title>
+</head>
+<body>
+<h1>🌌Existing Planets in Our Galaxy🌌</h1>
+<br>
+
+<ul>
+    <% planets.forEach(planet => { %>
+        <li>
+            <a href="/planets/<%= planet._id %>"><%= planet.name %></a>
+        </li>
+    <% }); %>
+</ul>
+
+<a href="/planets/new">Add a Planet</a>
+</body>
+</html>

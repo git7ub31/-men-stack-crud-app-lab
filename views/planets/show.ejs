@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<a href="/planets">Take me back</a>
+<a href="/planets/<%= planet._id %>/edit">Edit <%= planet.name %></a>
+<title><%= planet.name %></title>
+</head>
+<body>
+<h1><%= planet.name %></h1>
+<h2>Age: <%= planet.description %></h2>
+<form action="/planets/<%=planet._id%>?_method=DELETE" method="POST">
+    <button type="submit">Delete <%= planet.name %></button>
+    </form>
+</body>
+</html>
